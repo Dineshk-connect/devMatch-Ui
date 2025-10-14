@@ -35,3 +35,13 @@ Session -03
 - If token is not present redirect user to login page
 - Logout
 - profile Page
+- Get the feed and the feed in the store
+- Build the user card on the feed
+
+
+Session -04
+
+- Edit profile feature
+- Show Toast Message on save of profile
+- See all my connections
+
