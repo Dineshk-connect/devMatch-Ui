@@ -43,5 +43,11 @@ Session -04
 
 - Edit profile feature
 - Show Toast Message on save of profile
-- See all my connections
+- New page - See all my connections
+- New page - see all my Connections Requests
+
+Session -05
+
+- Feature - Accept/Reject Connection Request
+
 
