@@ -49,5 +49,6 @@ Session -04
 Session -05
 
 - Feature - Accept/Reject Connection Request
+- Send/Ignore the user card from the feed
 
 
