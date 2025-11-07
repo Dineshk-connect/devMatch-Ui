@@ -3,6 +3,7 @@ import { BASE_URL } from "../utils/constants";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnection } from "../utils/connectionSlice";
+import UserCard from "./UserCard"; // ✅ import shared card
 
 const Connections = () => {
   const connections = useSelector((store) => store.connection);
@@ -23,49 +24,28 @@ const Connections = () => {
     fetchConnections();
   }, []);
 
-  if (!connections) {
-    return <h1 className="text-center text-xl mt-10">No Connection</h1>;
-  }
-
-  if (connections.length === 0) {
+  if (!connections || connections.length === 0) {
     return (
-      <div className="text-center mt-10">
-        <h1 className="font-bold text-2xl">No Connections Found</h1>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 text-white">
+        <h1 className="font-bold text-3xl mb-4 drop-shadow-lg">No Connections Found 😕</h1>
+        <p className="text-lg opacity-90">
+          Start connecting with other developers to see them here!
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center my-10 gap-4">
-      <h1 className="font-bold text-2xl mb-4">Connections</h1>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 py-10 px-6">
+      <h1 className="text-center text-white text-4xl font-bold mb-10 drop-shadow-lg">
+        Your Connections
+      </h1>
 
-      {connections.map((connection) => {
-        const { _id,firstName, lastName, photoUrl, age, gender, about } = connection;
-
-        return (
-          <div
-            key={_id} // if you have an id, use it
-            className="flex items-center p-4 rounded-lg bg-base-300 w-1/2"
-          >
-            <img
-              alt="profile"
-              className="w-14 h-14 rounded-full object-cover"
-              src={photoUrl}
-            />
-            <div className="ml-4">
-              <h2 className="font-bold text-xl">
-                {firstName} {lastName}
-              </h2>
-              {age && gender && (
-                <p className="text-sm text-gray-500">
-                  {age} • {gender}
-                </p>
-              )}
-              <p className="text-sm mt-1">{about}</p>
-            </div>
-          </div>
-        );
-      })}
+      <div className="max-w-5xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {connections.map((connection) => (
+          <UserCard key={connection._id} user={connection} type="connection" />
+        ))}
+      </div>
     </div>
   );
 };

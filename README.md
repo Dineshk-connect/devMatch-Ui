@@ -52,3 +52,16 @@ Session -05
 - Send/Ignore the user card from the feed
 
 
+
+# Razorpay Payment Gateway Integration
+    - Sign up on Razorpay & complete KYC
+    - Created a UI for premium page
+    - Creating an API for create order in backend
+    - added key and secret in env file
+    - Intialized Razorpay in utils
+    - creating order on Razorpay
+    - create Schema and model
+    - saved the order in payment collection
+    - make the API dynamic 
+
+
