@@ -1,4 +1,51 @@
-# DevMatch
+# DevMatch UI – Real-Time Developer Match & Chat Platform (Frontend)
+
+DevMatch UI is the frontend for a real-time developer networking platform where users can match with other developers, chat instantly, and collaborate.  
+Built with React and Tailwind CSS, the interface focuses on speed, responsiveness, and a clean developer-centric experience.
+
+---
+
+## ⚙️ Tech Stack
+- **React.js**
+- **Tailwind CSS**
+- **React Router**
+- **Axios**
+- **Socket.io Client**
+- **JWT-based auth integration**
+
+---
+
+## ✨ Features
+- **Developer Matching** – Swipe/match style interactions inspired by Tinder but built for developers.  
+- **Real-Time Chat** – Instant messaging powered by Socket.io.  
+- **User Authentication** – Login & signup UI integrated with backend JWT auth.  
+- **Profile Management** – Update developer details, skills, and preferences.  
+- **Responsive Layout** – Fully optimized for desktop and mobile.  
+- **Clean Component Architecture** – Organized and scalable React structure.
+
+---
+
+
+## 🔌 Connecting to the Backend
+Create a `.env` file
+VITE_SERVER_URL=https://your-backend-url
+
+
+The UI communicates with the backend using Axios + Socket.io client.
+
+---
+
+## 🚀 Running the Project
+
+```bash
+npm install
+npm run dev
+The app will start on:
+http://localhost:5173
+
+
+
+# DevMatch Development Phases(Learning purpose)
 
 Day -01
 
