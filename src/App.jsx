@@ -11,6 +11,9 @@ import Requests from "./components/Requests";
 import Premium from "./components/Premium";
 import Chat from "./components/Chat";
 import UserProfile from "./components/UserProfile";
+import PremiumChat from "./components/PremiumChat";
+import CodeAnalyzer from "./components/CodeAnalyzer";
+import RoadmapGenerator from "./components/RoadmapGenerator";
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
               <Route path="/requests" element={<Requests />} />
               <Route path="/premium" element={<Premium />} />
               <Route path="/chat/:targetUserId" element={<Chat />} />
+              <Route path="/premium/chat" element={<PremiumChat />} />
+              <Route path="/premium/analyzer" element={<CodeAnalyzer />} />
+              <Route path="/premium/roadmap" element={<RoadmapGenerator />} />
             </Route>
           </Routes>
         </BrowserRouter>
